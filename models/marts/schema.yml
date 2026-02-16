@@ -1,0 +1,128 @@
+version: 2
+
+models:
+
+  - name: dim_customer
+    description: "Customer dimension table containing unique customers."
+    columns:
+      - name: customer_key
+        description: "Surrogate key for customer dimension."
+        tests:
+          - not_null
+          - unique
+
+      - name: customer_id
+        description: "Natural business key identifying the customer."
+        tests:
+          - not_null
+
+
+  - name: dim_product
+    description: "Product dimension table containing unique products."
+    columns:
+      - name: product_key
+        description: "Surrogate key for product dimension."
+        tests:
+          - not_null
+          - unique
+
+      - name: product_id
+        description: "Natural business key identifying the product."
+        tests:
+          - not_null
+
+
+  - name: dim_date
+    description: "Date dimension table derived from order dates."
+    columns:
+      - name: date_key
+        description: "Surrogate key for date dimension."
+        tests:
+          - not_null
+          - unique
+
+      - name: full_date
+        description: "Calendar date."
+        tests:
+          - not_null
+          - unique
+
+
+  - name: dim_location
+    description: "Location dimension containing geographic attributes."
+    columns:
+      - name: location_key
+        description: "Surrogate key for location dimension."
+        tests:
+          - not_null
+          - unique
+
+
+  - name: dim_ship_mode
+    description: "Shipping mode dimension containing delivery methods."
+    columns:
+      - name: ship_mode_key
+        description: "Surrogate key for ship mode dimension."
+        tests:
+          - not_null
+          - unique
+
+      - name: ship_mode
+        description: "Shipping method used for the order."
+        tests:
+          - not_null
+
+
+  - name: fact_sales
+    description: "Fact table containing sales transactions."
+    columns:
+
+      - name: order_id
+        description: "Unique identifier for each order."
+        tests:
+          - not_null
+
+      - name: date_key
+        description: "Foreign key referencing dim_date."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+
+      - name: customer_key
+        description: "Foreign key referencing dim_customer."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_customer')
+              field: customer_key
+
+      - name: product_key
+        description: "Foreign key referencing dim_product."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_product')
+              field: product_key
+
+      - name: location_key
+        description: "Foreign key referencing dim_location."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_location')
+              field: location_key
+
+      - name: ship_mode_key
+        description: "Foreign key referencing dim_ship_mode."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_ship_mode')
+              field: ship_mode_key
+
+      - name: sales
+        description: "Sales amount for the transaction."
+        tests:
+          - not_null

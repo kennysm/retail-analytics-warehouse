@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: raw
+    # database: postgres  <-- Remova ou comente esta linha
+    schema: raw
+    tables:
+      - name: superstore_sales
+      
