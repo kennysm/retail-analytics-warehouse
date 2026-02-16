@@ -1,0 +1,64 @@
+
+
+Table fact_sales {
+  sales_key integer pk
+  order_id varchar(30) 
+  order_date_key integer
+  ship_date_key integer
+  location_key integer
+  product_key integer
+  customer_key integer
+  ship_mode_key integer
+  sales decimal(10,2)
+}
+
+Table dim_location {
+  location_key integer pk
+  country varchar(30)
+  city varchar(30)
+  state varchar(30)
+  postal_code varchar(10)
+  region varchar(20)
+}
+
+table dim_product {
+  product_key integer pk
+  product_id varchar(20)
+  category varchar(15)
+  sub_category varchar(15)
+  product_name varchar(100)
+}
+
+table dim_customer {
+  customer_key integer pk
+  customer_id varchar(15)
+  customer_name varchar(50)
+  segment varchar(15)
+}
+
+table dim_ship_mode {
+  ship_mode_key integer pk
+  ship_mode varchar(20)
+}
+
+table dim_date {
+  date_key integer pk
+  full_date date
+  year integer
+  month integer
+  month_name varchar(15)
+  quarter varchar(10)
+  week integer
+  day_of_week varchar(20)
+}
+
+
+
+
+Ref: fact_sales.location_key > dim_location.location_key
+Ref: fact_sales.product_key > dim_product.product_key
+Ref: fact_sales.customer_key > dim_customer.customer_key
+Ref: fact_sales.ship_mode_key > dim_ship_mode.ship_mode_key
+Ref: fact_sales.order_date_key > dim_date.date_key
+Ref: fact_sales.ship_date_key > dim_date.date_key
+

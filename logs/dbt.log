@@ -1,0 +1,122 @@
+[0m19:55:15.624194 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020CD2026E50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020CD57DA0D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020CD57D9F10>]}
+
+
+============================== 19:55:15.710161 | b9fc3fa3-2a58-4424-9903-a6879aebc539 ==============================
+[0m19:55:15.710161 [info ] [MainThread]: Running with dbt=1.11.5
+[0m19:55:15.712451 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Pichau\\.dbt', 'invocation_command': 'dbt init retail_analytics', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m19:55:15.810347 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\Pichau\.dbt
+[0m19:55:15.816970 [debug] [MainThread]: Starter project path: C:\Users\Pichau\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\include\starter_project
+[0m19:55:15.910706 [info ] [MainThread]: 
+Your new dbt project "retail_analytics" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m19:55:15.911950 [info ] [MainThread]: Setting up your profile.
+[0m19:56:54.624716 [info ] [MainThread]: Profile retail_analytics written to C:\Users\Pichau\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m19:56:54.628394 [debug] [MainThread]: Command `dbt init` succeeded at 19:56:54.628394 after 99.22 seconds
+[0m19:56:54.630538 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020CCEBCF950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020CD55077D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020CD55078D0>]}
+[0m19:56:54.631644 [debug] [MainThread]: Flushing usage events
+[0m19:56:55.770639 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:59:06.519254 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020FE391A790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020FE70BF4D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020FE70BFB50>]}
+
+
+============================== 19:59:06.525329 | 8efb4b74-0c00-4e47-b2d1-f6082211f5cc ==============================
+[0m19:59:06.525329 [info ] [MainThread]: Running with dbt=1.11.5
+[0m19:59:06.527516 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Pichau\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt init retail_analytics', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m19:59:06.565736 [info ] [MainThread]: A project called retail_analytics already exists here.
+[0m19:59:06.567755 [debug] [MainThread]: Command `dbt init` succeeded at 19:59:06.567755 after 0.23 seconds
+[0m19:59:06.569262 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020FE047F950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020FE7056590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020FE7057650>]}
+[0m19:59:06.570585 [debug] [MainThread]: Flushing usage events
+[0m19:59:07.274888 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:59:25.639391 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AF69B56DD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AF69BBF110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AF68CA2A90>]}
+
+
+============================== 19:59:25.645083 | 03d36471-f346-4f3b-ad32-a0ab4b150715 ==============================
+[0m19:59:25.645083 [info ] [MainThread]: Running with dbt=1.11.5
+[0m19:59:25.646117 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Pichau\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m19:59:25.685838 [info ] [MainThread]: dbt version: 1.11.5
+[0m19:59:25.686345 [info ] [MainThread]: python version: 3.11.0
+[0m19:59:25.688867 [info ] [MainThread]: python path: C:\Users\Pichau\AppData\Local\Programs\Python\Python311\python.exe
+[0m19:59:25.689925 [info ] [MainThread]: os info: Windows-10-10.0.26100-SP0
+[0m19:59:25.782906 [info ] [MainThread]: Using profiles dir at C:\Users\Pichau\.dbt
+[0m19:59:25.783911 [info ] [MainThread]: Using profiles.yml file at C:\Users\Pichau\.dbt\profiles.yml
+[0m19:59:25.786122 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Pichau\Documents\Retail Analytics Warehouse\dbt_project.yml
+[0m19:59:25.789061 [info ] [MainThread]: adapter type: postgres
+[0m19:59:25.790074 [info ] [MainThread]: adapter version: 1.10.0
+[0m19:59:25.792308 [info ] [MainThread]: Configuration:
+[0m19:59:25.793681 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:59:25.794188 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m19:59:25.795353 [info ] [MainThread]: Required dependencies:
+[0m19:59:25.797675 [debug] [MainThread]: Executing "git --help"
+[0m19:59:26.159250 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m19:59:26.160251 [debug] [MainThread]: STDERR: "b''"
+[0m19:59:26.161652 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m19:59:26.162669 [info ] [MainThread]: Connection:
+[0m19:59:26.163752 [info ] [MainThread]:   host: localhost
+[0m19:59:26.164979 [info ] [MainThread]:   port: 1
+[0m19:59:26.166188 [info ] [MainThread]:   user: postgres
+[0m19:59:26.167301 [info ] [MainThread]:   database: retail_analytics_dw
+[0m19:59:26.168416 [info ] [MainThread]:   schema: staging
+[0m19:59:26.170729 [info ] [MainThread]:   connect_timeout: 10
+[0m19:59:26.171871 [info ] [MainThread]:   role: None
+[0m19:59:26.172951 [info ] [MainThread]:   search_path: None
+[0m19:59:26.175087 [info ] [MainThread]:   keepalives_idle: 0
+[0m19:59:26.176093 [info ] [MainThread]:   sslmode: None
+[0m19:59:26.178255 [info ] [MainThread]:   sslcert: None
+[0m19:59:26.180603 [info ] [MainThread]:   sslkey: None
+[0m19:59:26.182896 [info ] [MainThread]:   sslrootcert: None
+[0m19:59:26.183930 [info ] [MainThread]:   application_name: dbt
+[0m19:59:26.184943 [info ] [MainThread]:   retries: 1
+[0m19:59:26.185946 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m19:59:26.924752 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m19:59:27.116601 [debug] [MainThread]: Using postgres connection "debug"
+[0m19:59:27.117600 [debug] [MainThread]: On debug: select 1 as id
+[0m19:59:27.119600 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:59:31.242181 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "localhost" (::1), port 1 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 1 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+[0m19:59:35.340687 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m19:59:35.343398 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m19:59:35.344403 [debug] [MainThread]: On debug: No close available on handle
+[0m19:59:35.345470 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m19:59:35.347677 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m19:59:35.348984 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\Pichau\Documents\Retail Analytics Warehouse\dbt_project.yml> not found
+
+[0m19:59:35.350042 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  connection to server at "localhost" (::1), port 1 failed: Connection refused (0x0000274D/10061)
+  	Is the server running on that host and accepting TCP/IP connections?
+  connection to server at "localhost" (127.0.0.1), port 1 failed: Connection refused (0x0000274D/10061)
+  	Is the server running on that host and accepting TCP/IP connections?
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m19:59:35.353701 [debug] [MainThread]: Command `dbt debug` failed at 19:59:35.352360 after 10.10 seconds
+[0m19:59:35.354715 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m19:59:35.356962 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AF69B57350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AF69B57610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AF6320A090>]}
+[0m19:59:35.358025 [debug] [MainThread]: Flushing usage events
+[0m19:59:36.009298 [debug] [MainThread]: An error was encountered while trying to flush usage events
