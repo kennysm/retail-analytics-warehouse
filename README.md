@@ -24,7 +24,11 @@ The final dimensional model is consumed by a high-performance Power BI Dashboard
 | ![Product](./docs/screenshots/Product.png) | ![Filters](./docs/screenshots/filtersproduct.png) |
 | ![Customer](./docs/screenshots/Customer.png) | ![Filters](./docs/screenshots/filterscustomer.png) |
 
----
+### 🎨 UI/UX Design
+The dashboard layout and user experience were first prototyped in **Figma** to ensure a modern, user-centric interface before implementation in Power BI.
+| ![Template1](./docs/design/Template1.png)
+| ![Template2](./docs/design/Template2.png)
+| ![Template3](./docs/design/Template3.png)
 
 ## 🏗️ Architecture
 The project follows a layered architecture inspired by the Medallion pattern:
