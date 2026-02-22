@@ -78,4 +78,4 @@ Implement SCD Type 2 using dbt snapshots.
 
 Introduce incremental models for large-scale data handling.
 
-Deploy orchestration workflow (Airflow/GitHub Actions)..
+Deploy orchestration workflow (Airflow/GitHub Actions)...
