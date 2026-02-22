@@ -1,110 +1,77 @@
-<<<<<<< HEAD
-Retail Analytics Warehouse
-📌 Business Context
+# Retail Analytics Warehouse
 
-This project simulates a global retail company centralizing transactional sales data into a dimensional data warehouse to support business intelligence and strategic decision-making.
+## 📌 Business Context
+This project simulates a global retail company centralizing transactional sales data into a dimensional data warehouse to support business intelligence and strategic decision-making. 
 The dataset represents four years of retail operations including orders, customers, products, shipping information, and geographic attributes.
 
-🎯 Objective
-
+## 🎯 Objective
 Design and implement a dimensional data model optimized for analytical workloads and BI consumption using a layered transformation architecture with data quality validation.
 
-📊 Fact Table Grain
+## 📊 Power BI Visualization Layer (Intelligence Hub)
+The final dimensional model is consumed by a high-performance Power BI Dashboard, designed with a focus on UX and advanced analytical features:
 
-The grain of the fact table is defined as:
+* **Intelligence Hub Architecture:** A centralized entry point (Home) that connects three specialized dashboards: Executive Overview, Product Performance, and Customer Analysis.
+* **Advanced Navigation:** Implementation of page-specific bookmarks for synchronized filter menus, ensuring a fluid experience without "page-jumping".
+* **Smart Filtering System:** * **Synchronized Slicers:** Filters applied in one view are carried across the entire report seamlessly.
+    * **Custom Filter Badge (HTML/DAX):** A dynamic indicator that counts and identifies active filters, improving user context and navigation.
+* **Performance:** Optimized using **Import Mode** for sub-second query response times.
 
-- One row represents a single product item within a specific order.
+### 📸 Dashboard Preview
+| Home (Intelligence Hub) | Filter Menu & UI Details |
+| :--- | :--- |
+| ![Home](./docs/screenshots/home.png) | 
+| ![Overview](./docs/screenshots/Overview.png) | ![Filters](./docs/screenshots/filtersoverview.png) |
+| ![Product](./docs/screenshots/Product.png) | ![Filters](./docs/screenshots/filtersproduct.png) |
+| ![Customer](./docs/screenshots/Customer.png) | ![Filters](./docs/screenshots/filterscustomer.png) |
 
-This ensures accurate revenue aggregation and enables product-level, customer-level, geographic, and time-based analysis without ambiguity.
+---
 
-📦 Fact Table
-fact_sales
-
-Contains transactional sales records at the defined grain.
-
-📐 Dimensions
-
-dim_customer (SCD Type 1)
-dim_product (SCD Type 1)
-dim_date
-dim_location
-dim_ship_mode
-
-🔄 Slowly Changing Dimensions Strategy
-
-All dimensions are implemented as SCD Type 1, meaning attribute changes overwrite previous values.
-This simplifies the initial implementation while preserving dimensional modeling principles and analytical consistency.
-
-🧠 Modeling Decisions
-
--Surrogate keys implemented for all dimensions
--Star schema optimized for analytical queries
--Fact table designed at product-level grain
--Referential integrity enforced using dbt relationship tests
--Data quality validation applied at both source and mart layers
-
-🧪 Data Quality & Testing
-
--Data quality is enforced using dbt tests:
--not_null tests on surrogate keys
--unique tests on dimension primary keys
--relationships tests to guarantee referential integrity
--Source-level validation on raw data
-
-This ensures consistency between fact and dimension tables and prevents broken analytical models.
-
-🏗️ Architecture
-
+## 🏗️ Architecture
 The project follows a layered architecture inspired by the Medallion pattern:
+* **Raw layer** – Source ingestion.
+* **Staging layer** – Data cleaning and standardization.
+* **Marts layer** – Dimensional star schema (Fact and Dimensions).
 
--Raw layer – source ingestion
--Staging layer – data cleaning and standardization
--Marts layer – dimensional star schema
+### 🔗 Data Lineage (dbt)
+The following lineage graph illustrates the end-to-end data flow, from raw ingestion to the final dimensional model. This architecture ensures modularity and clear data ownership.
+![Lineage Graph](./docs/screenshots/lineage.png)
 
-The final dimensional model is consumed by Power BI using Import Mode.
+## 📊 Fact Table Grain
+One row represents a single product item within a specific order. This ensures accurate revenue aggregation and enables product-level, customer-level, geographic, and time-based analysis without ambiguity.
 
-🛠️ Tech Stack
+## 📐 Dimensions & Modeling
+* **SCD Type 1:** `dim_customer`, `dim_product`, `dim_date`, `dim_location`, `dim_ship_mode`.
+* **Surrogate Keys:** Implemented for all dimensions to ensure historical integrity and join performance.
+* **Referential Integrity:** Enforced using dbt relationship tests.
 
--PostgreSQL (Data Warehouse)
--dbt (Data Transformation & Testing)
--DBeaver (Database Management)
--Power BI (Data Visualization)
--Git & GitHub (Version Control)
+## 🧪 Data Quality & Testing
+* **Schema Validation:** Data quality is enforced using dbt tests (not_null, unique, and relationships).
+* **Referential Integrity:** Guaranteed between fact and dimension tables through dbt constraints.
 
-📁 Project Structure
+## 🛠️ Tech Stack
+* **PostgreSQL** (Data Warehouse)
+* **dbt** (Data Transformation & Testing)
+* **Power BI** (Advanced Data Visualization & DAX)
+* **Git & GitHub** (Version Control)
+
+## 📁 Project Structure
+```text
 models/
-│
 ├── staging/
 │   └── stg_superstore_sales.sql
-│
-├── marts/
-│   ├── dim_customer.sql
-│   ├── dim_product.sql
-│   ├── dim_date.sql
-│   ├── dim_location.sql
-│   ├── dim_ship_mode.sql
-│   └── fact_sales.sql
+└── marts/
+    ├── dim_customer.sql
+    ├── dim_date.sql
+    ├── dim_location.sql
+    ├── dim_product.sql
+    ├── dim_ship_mode.sql
+    └── fact_sales.sql
+docs/
+└── screenshots/ (Dashboard previews)
 
 📌 Future Improvements
+Implement SCD Type 2 using dbt snapshots.
 
-Implement SCD Type 2 using dbt snapshots
-Introduce incremental models
-Add performance benchmarking
-Deploy orchestration workflow
-=======
-Welcome to your new dbt project!
+Introduce incremental models for large-scale data handling.
 
-### Using the starter project
-
-Try running the following commands:
-- dbt run
-- dbt test
-
-
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
->>>>>>> 5c35c2691063a8953fd76943efdb77b746f8f453
+Deploy orchestration workflow (Airflow/GitHub Actions).
