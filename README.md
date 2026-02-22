@@ -17,13 +17,13 @@ The final dimensional model is consumed by a high-performance Power BI Dashboard
 * **Performance:** Optimized using **Import Mode** for sub-second query response times.
 
 ### 📸 Dashboard Preview
+
 | Home (Intelligence Hub) | Filter Menu & UI Details |
 | :--- | :--- |
-| ![Home](./docs/screenshots/Home.png) | 
+| ![Home](./docs/screenshots/Home.png) | **Centralized Navigation Portal** <br> Direct access to all analytics domains with persistent state. |
 | ![Overview](./docs/screenshots/Overview.png) | ![Filters](./docs/screenshots/filtersoverview.png) |
 | ![Product](./docs/screenshots/Product.png) | ![Filters](./docs/screenshots/filtersproduct.png) |
 | ![Customer](./docs/screenshots/Customer.png) | ![Filters](./docs/screenshots/filterscustomer.png) |
-
 
 
 ## 🏗️ Architecture
