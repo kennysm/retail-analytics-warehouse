@@ -19,7 +19,7 @@ The final dimensional model is consumed by a high-performance Power BI Dashboard
 ### 📸 Dashboard Preview
 | Home (Intelligence Hub) | Filter Menu & UI Details |
 | :--- | :--- |
-| ![Home](./docs/screenshots/home.png) | 
+| ![Home](./docs/screenshots/Home.png) | 
 | ![Overview](./docs/screenshots/Overview.png) | ![Filters](./docs/screenshots/filtersoverview.png) |
 | ![Product](./docs/screenshots/Product.png) | ![Filters](./docs/screenshots/filtersproduct.png) |
 | ![Customer](./docs/screenshots/Customer.png) | ![Filters](./docs/screenshots/filterscustomer.png) |
